@@ -1,11 +1,17 @@
-import { Avatar,  Grid, IconButton,  Paper, Typography } from "@material-ui/core";
 import React from "react";
+import { useHomeStyle } from "../pages/Home/theme";
+
+import Avatar from "@material-ui/core/Avatar";
+import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 import classNames from "classnames";
-import ReplyIcon from '@material-ui/icons/Reply';
-import CommentsIcon from '@material-ui/icons/ChatBubbleOutline';
-import RepostIcon from '@material-ui/icons/Repeat';
-import LikeIcon from '@material-ui/icons/FavoriteBorder';
-import { useHomeStyle } from "../pages/Home";
+import ReplyIcon from "@material-ui/icons/Reply";
+import CommentsIcon from "@material-ui/icons/ChatBubbleOutline";
+import RepostIcon from "@material-ui/icons/Repeat";
+import LikeIcon from "@material-ui/icons/FavoriteBorder";
+
 
 
 interface TweetProps {
@@ -17,8 +23,11 @@ interface TweetProps {
     avatarUrl: string
   }
 }
-export const Tweet: React.FC<TweetProps> = ({ classes, user, text }: TweetProps): React.ReactElement => {
 
+
+export const Tweet: React.FC<TweetProps> = ({
+  classes, user, text
+}: TweetProps): React.ReactElement => {
 
   return (
     <Paper variant="outlined" className={classNames(classes.mainSectionLiner, classes.tweet)}>
@@ -62,8 +71,6 @@ export const Tweet: React.FC<TweetProps> = ({ classes, user, text }: TweetProps)
               <span className={classes.iconCounts}>1</span>
             </div>
           </article>
-
-
         </Grid>
       </Grid>
     </Paper>

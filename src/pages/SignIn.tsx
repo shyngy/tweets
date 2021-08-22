@@ -1,12 +1,16 @@
 import React from 'react';
-import { makeStyles, Typography, Button } from '@material-ui/core';
+import { ModalBlock } from '../components/ModalBlock';
+import { makeStyles } from '@material-ui/core';
+
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import twitter from "../assets/img/twitter.png"
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
-import { ModalBlock } from '../components/ModalBlock';
-import { useMediaQuery } from '@material-ui/core';
+
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 export const useStylesSignIn = makeStyles((theme) => ({
   wrapper: {
@@ -58,7 +62,7 @@ export const useStylesSignIn = makeStyles((theme) => ({
 
 }));
 
-export const SignIn: React.FC = (): React.ReactElement =>{
+export const SignIn: React.FC = (): React.ReactElement => {
   const classes = useStylesSignIn();
   const [visibleModal, setVisibleModal] = React.useState<'signIn' | 'signUp'>();
 
@@ -78,7 +82,7 @@ export const SignIn: React.FC = (): React.ReactElement =>{
     <div className={classes.wrapper}>
 
       <aside className={matches ? classes.descriptionsSide : classes.displayNone}>
-        <img className={classes.twitterPaint} src={twitter} />
+        <img className={classes.twitterPaint} src={twitter} alt="tweeter icon" />
 
       </aside>
       <section className={classes.loginSide}>
