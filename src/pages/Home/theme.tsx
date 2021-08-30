@@ -40,6 +40,7 @@ export const useHomeStyle = makeStyles((theme: Theme) => ({
       padding: "5px",
       marginBottom: 5,
     },
+   
     "&:hover": {
       "& div": {
         backgroundColor: "rgba(29, 161, 242, 0.1)",
@@ -72,23 +73,44 @@ export const useHomeStyle = makeStyles((theme: Theme) => ({
   },
 
   mainHeader:{
+    display: 'flex',
     position: "sticky",
     backgroundColor: "white",
+    borderRadius: 0,
+    border: 'none',
+    padding: 4,
+    borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
     top: 0,
     zIndex: 10,
+    "& h4": {
+      fontSize: 22,
+      fontWeight: 700,
+      paddingBottom: 10,
+      position: "relative",
+      bottom: -10,
+      marginLeft: 10,
+      marginBottom: 15,
+
+    }
   },
 
   mainSection: {
+    position: 'relative',
     height: "100%",
     borderRadius: 0,
     borderBottom: 0,
     borderTop: 0,
+
     
   },
   tweet: {
     cursor: "pointer",
     "&:hover": {
       backgroundColor: "rgb(245,248,250)"
+    },
+    "& a":{
+      textDecoration:'none',
+      color: 'inherit'
     }
   },
   mainSectionLiner: {
@@ -98,11 +120,7 @@ export const useHomeStyle = makeStyles((theme: Theme) => ({
     borderRight: 0,
     borderTop: 0,
     borderRadius: 0,
-    "& h4": {
-      fontSize: 20,
-      fontWeight: 700,
-      paddingBottom: 10
-    }
+    
   },
   searchSection: {
     padding: "2px 8px 0 1vw",
@@ -224,6 +242,10 @@ export const useHomeStyle = makeStyles((theme: Theme) => ({
     "&:hover": {
       backgroundColor: "#edf3f6",
     },
+    "& a":{
+      color: "inherit",
+      textDecoration: "none"
+    }
   },
 
 }))

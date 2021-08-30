@@ -9,9 +9,9 @@ export interface Tweet {
   _id: string
   text: string;
   user: {
-    fullName: string;
+    fullname: string;
     username: string;
-    avatarUrl: string
+    avatarUrl: string;
   }
 };
 

@@ -20,7 +20,7 @@ export const AddTweetForm: React.FC<AddTweetFormI> = ({
   classes
 }: AddTweetFormI): React.ReactElement => {
 
-  
+
   const [text, setText] = React.useState<string>("");
   const textLimitPercent = Math.round((text.length / 280) * 100);
   const textCount = 280 - text.length;
@@ -30,7 +30,7 @@ export const AddTweetForm: React.FC<AddTweetFormI> = ({
       setText(e.currentTarget.value);
     }
   };
-  
+
   const handleButtonClick = (): void => {
     setText("");
   };

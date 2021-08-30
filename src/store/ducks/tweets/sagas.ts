@@ -16,9 +16,8 @@ export function* fetchTweetsRequest() {
     
   }
   
-}
-
+};
 
 export function* tweetsSaga(){
-  yield takeEvery(TweetsActionType.FETCH_TWEETS, fetchTweetsRequest)
-}
+  yield takeEvery(TweetsActionType.FETCH_TWEETS, fetchTweetsRequest);
+};
