@@ -3,7 +3,7 @@ import { useHomeStyle } from "../pages/Home/theme";
 import { ModalBlock } from "./ModalBlock";
 import { AddTweetForm } from "./AddTweetForm";
 
-import TwitterIcon from '@material-ui/icons/Twitter';
+import FiberSmartRecordIcon from "@material-ui/icons/FiberSmartRecord";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
@@ -43,7 +43,7 @@ export const SideMenu: React.FC<SideMenuProps> = (
       <li className={classes.sideMenuListLi}>
         <div>
           <Link to="/home">
-            <TwitterIcon style={{ width: 40, height: 40, margin: "3 5" }} className={classes.sideMenuListIcons} color="primary" />
+            <FiberSmartRecordIcon style={{ width: 40, height: 40, margin: "3 5" }} className={classes.sideMenuListIcons} color="primary" />
           </Link>
         </div>
 

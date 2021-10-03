@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core';
 
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import TwitterIcon from '@material-ui/icons/Twitter';
+import FiberSmartRecordIcon from "@material-ui/icons/FiberSmartRecord";
 import twitter from "../assets/img/twitter.png"
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControl from '@material-ui/core/FormControl';
@@ -87,7 +87,7 @@ export const SignIn: React.FC = (): React.ReactElement => {
       </aside>
       <section className={classes.loginSide}>
         <div className={classes.loginSideWrapper}>
-          <TwitterIcon color="primary" className={classes.loginSideTwitterIcon} />
+          <FiberSmartRecordIcon color="primary" className={classes.loginSideTwitterIcon} />
           <Typography className={classes.loginSideTitle} gutterBottom variant="h4">
             Узнайте, что происходит в мире прямо сейчас
           </Typography>

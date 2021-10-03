@@ -9,7 +9,8 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import classNames from "classnames";
 import ImageOutlinedIcon from "@material-ui/icons/ImageOutlined";
 import EmojiIcon from "@material-ui/icons/SentimentSatisfiedOutlined";
-
+import {useDispatch} from "react-redux"
+import { fetchAddTweet } from "../store/ducks/tweets/actionCreatores";
 
 interface AddTweetFormI {
   classes: ReturnType<typeof useHomeStyle>;
@@ -20,7 +21,7 @@ export const AddTweetForm: React.FC<AddTweetFormI> = ({
   classes
 }: AddTweetFormI): React.ReactElement => {
 
-
+  const dispatch = useDispatch();
   const [text, setText] = React.useState<string>("");
   const textLimitPercent = Math.round((text.length / 280) * 100);
   const textCount = 280 - text.length;
@@ -33,6 +34,7 @@ export const AddTweetForm: React.FC<AddTweetFormI> = ({
 
   const handleButtonClick = (): void => {
     setText("");
+    dispatch(fetchAddTweet(text))
   };
 
   return (
